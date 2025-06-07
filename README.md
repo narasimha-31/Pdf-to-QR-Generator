@@ -84,8 +84,7 @@ Just building tools I need, and making them fun along the way 💡
 ## 🚀 Coming Soon
 
 - [ ] 📥 QR-to-Download Mode (Part 2 of the project)
-- [ ] 💾 File History View (admin only)
-- [ ] 🔐 Optional file expiration
+
 
 ---
 
