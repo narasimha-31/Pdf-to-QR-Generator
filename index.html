@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Favicon -->
+ <link rel="icon" type="image/png" href="qr_icon.png">
+  <title>PDF to QR Generator (Online)</title>
+  
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <style>
+  /* Enable radial gradient for Tailwind CDN */
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle at center, var(--tw-gradient-stops));
+  }
+</style>
+</head>
+
+<body class="relative text-white min-h-screen flex items-center justify-center px-4">
+
+  <!-- Particle background -->
+<div id="tsparticles" class="absolute inset-0 z-0"></div>
+
+<!-- ✨ Fancy glow layer -->
+<div id="powerGlow" class="absolute inset-0 z-0 pointer-events-none transition duration-500"></div>
+
+
+
+
+  <!-- App container -->
+  <div class="z-10 bg-white text-gray-900 w-full max-w-sm sm:max-w-md p-4 sm:p-6 rounded-lg shadow-xl text-center">
+    <h1 class="text-lg sm:text-xl font-bold mb-4 flex items-center justify-center gap-2">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="QR Icon" class="w-6 h-6 sm:w-7 sm:h-7">
+      PDF to QR Code
+    </h1>
+
+    <label for="pdfFile" class="block w-full mb-2 cursor-pointer">
+    <div class="w-full bg-gray-200 hover:bg-gray-300 text-gray-700 py-2 rounded text-sm text-center font-medium">
+    📁 Choose PDF File
+    </div>
+    </label>
+
+    <input type="file" id="pdfFile" accept=".pdf" class="hidden" onchange="showFileName()" />
+
+<!-- 👇 This will show the selected file name -->
+<p id="fileNameDisplay" class="text-sm text-gray-600 mb-4 italic text-center">No file selected</p>
+
+
+
+    <button id="uploadBtn" onclick="uploadPDF()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded font-semibold text-sm">
+      Generate QR Code
+    </button>
+
+    <div id="loading" class="mt-4 hidden text-sm text-gray-500">Uploading PDF... Please wait ⏳</div>
+    <div id="success" class="mt-4 hidden text-green-600 text-sm font-medium">✅ QR generated successfully!</div>
+
+    <div id="linkWrapper" class="mt-2 hidden">
+      <p class="text-sm text-gray-700">🔗 Public Link:</p>
+      <input type="text" id="publicLink" readonly class="mt-1 w-full border rounded p-2 text-xs sm:text-sm" />
+      <button onclick="copyLink()" class="mt-2 bg-gray-800 text-white px-4 py-1 rounded text-sm hover:bg-gray-700">
+        Copy Link
+      </button>
+    </div>
+
+    <!-- Power Meter UI -->
+  <div class="mt-6 text-left">
+    <p id="powerLabel" class="text-sm font-medium mb-1 text-gray-700">Power level: 🟢 Idle</p>
+    <div class="w-full h-4 bg-gray-200 rounded-full">
+      <div id="powerBar" class="h-full w-0 bg-green-500 rounded-full transition-all duration-300 ease-in-out"></div>
+    </div>
+  </div>
+
+    <div id="qr" class="mt-6 flex justify-center overflow-x-auto"></div>
+  </div>
+
+  <script defer src="app.js"></script>
+
+  <!-- tsParticles CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<script>
+  tsParticles.load("tsparticles", {
+    fullScreen: {
+      enable: true,
+      zIndex: -1
+    },
+    background: {
+      color: {
+        value: "#0f172a"
+      }
+    },
+    fpsLimit: 60,
+    interactivity: {
+      detectsOn: "window",
+      events: {
+        onClick: {
+          enable: true,
+          mode: "push"
+        },
+        onHover: {
+          enable: true,
+          mode: "repulse" // ✅ Added this
+        },
+        resize: true
+      },
+      modes: {
+        push: {
+          quantity: 4
+        },
+        repulse: {
+          distance: 100,
+          duration: 0.4
+        }
+      }
+    },
+    particles: {
+      color: {
+        value: ["#00fffc", "#fc00ff", "#fffc00"]
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: "none",
+        random: false,
+        straight: false,
+        outModes: {
+          default: "bounce"
+        }
+      },
+      number: {
+        value: 50,
+        density: {
+          enable: true,
+          area: 800
+        }
+      },
+      opacity: {
+        value: 0.6
+      },
+      shape: {
+        type: ["char", "star"],
+        character: {
+          value: ["✨", "🚀", "🎯", "💥", "❤️"],
+          font: "Verdana",
+          style: "",
+          weight: "400",
+          fill: true
+        }
+      },
+      size: {
+        value: { min: 4, max: 8 }
+      }
+    }
+  });
+
+
+let lastClickTime = Date.now();
+let floodAlertCooldown = false;
+
+  // ✅ Better flood message logic
+  const messages = [
+  "Alright champ, you filled the sky with stardust 🌌",
+  "Are you trying to crash the universe? 😅",
+  "Okay okay, you win. Now generate that QR 🤝",
+  "You just unlocked chaos mode 🚀",
+  "Michelangelo would've been proud of this mess 🎨",
+  "Bro... stop clicking 😭",
+  "Take a break bro....",
+  "NASA just called, they want their stars back 🛰️"
+];
+
+
+
+document.addEventListener("click", () => {
+  lastClickTime = Date.now();
+});
+
+setInterval(async () => {
+  const container = await tsParticles.domItem(0);
+  if (!container) return;
+
+  const count = container.particles.count;
+  const now = Date.now();
+  const timeSinceClick = now - lastClickTime;
+
+  // 💥 Power Meter Logic
+  const powerBar = document.getElementById("powerBar");
+  const powerLabel = document.getElementById("powerLabel");
+
+  let width = 0;
+  let label = "🟢 Idle";
+  let color = "bg-green-500";
+
+  if (count > 800) {
+    width = "100%";
+    label = "🔥 MAX POWER!!!";
+    color = "bg-red-600 animate-pulse";
+  } else if (count > 500) {
+    width = "66%";
+    label = "🔴 Turbo Mode!";
+    color = "bg-red-500";
+  } else if (count > 200) {
+    width = "35%";
+    label = "🟡 Warming Up...";
+    color = "bg-yellow-400";
+  } else {
+    width = "5%";
+    label = "🟢 Idle";
+    color = "bg-green-500";
+  }
+
+  powerBar.style.width = width;
+  powerBar.className = `h-full rounded-full transition-all duration-300 ease-in-out ${color}`;
+  powerLabel.textContent = `Power level: ${label}`;
+
+  // ✨ Fancy glow background control
+const powerGlow = document.getElementById("powerGlow");
+
+if (count > 800) {
+  powerGlow.className = "absolute inset-0 z-0 pointer-events-none transition duration-500 opacity-70 animate-pulse bg-gradient-radial from-pink-500 via-purple-500 to-blue-500 blur-2xl";
+} else if (count > 500) {
+  powerGlow.className = "absolute inset-0 z-0 pointer-events-none transition duration-500 opacity-50 bg-gradient-radial from-yellow-300 via-orange-400 to-pink-500 blur-xl";
+} else {
+  powerGlow.className = "absolute inset-0 z-0 pointer-events-none transition duration-500 opacity-0";
+}
+
+
+  // 🎯 Click-triggered alert logic (with cooldown)
+  if (
+    count > 200 &&
+    timeSinceClick < 3000 &&
+    !floodAlertCooldown
+  ) {
+    floodAlertCooldown = true;
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    alert(randomMessage);
+
+    setTimeout(() => {
+      floodAlertCooldown = false;
+    }, 20000);
+  }
+
+}, 1000);
+
+
+</script>
+
+
+</body>
+
+</html>
