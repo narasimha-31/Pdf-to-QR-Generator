@@ -70,7 +70,6 @@ When I want to share my **resume** quickly, I don’t want to rely on some rando
 - Resume sharing at meetups/career fairs
 - Quick PDF delivery via QR
 - Personal branding without relying on third-party apps
-- Teaching students how cloud + front-end can work together
 
 ---
 
