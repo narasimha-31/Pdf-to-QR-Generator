@@ -12,12 +12,12 @@
 
 ## 🤔 Why I Built This
 
-There are tons of QR code generators out there — I tried a few and most of them asked for my email just to send me a QR code. Felt like **data theft** in disguise.
+There are tons of QR code generators out there. I tried a few, and most of them asked for my email just to send me a QR code. Felt like **data theft** in disguise.
 
-So I thought — why not build my own?
+So I thought, 'Why not build my own?'
 
 This tool solves a simple but **personally important** problem:  
-When I want to share my **resume** quickly, I don’t want to rely on some random app. Instead, I just upload it here and show the QR code on my phone. Boom — people scan it and instantly view my resume. **No signups, no spam, no leaks.**
+When I want to share my **resume** quickly, I don’t want to rely on some random app. Instead, I just upload it here and show the QR code on my phone. Boom, people scan it and instantly view my resume. **No signups, no spam, no leaks.**
 
 ---
 
