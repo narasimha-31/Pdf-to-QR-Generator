@@ -6,7 +6,7 @@
 
 ## 🔗 Live Demo  
 [👉 Click here to try it out](https://pdf-to-qr.netlify.app/)  
-*(Paste your deployed site link above)*
+
 
 ---
 
