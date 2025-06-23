@@ -1,4 +1,4 @@
-# 📄✨ PDF to QR - Resume Sharer with a Twist
+# 📄 PDF to QR - Resume Sharer with a Twist
 
 > Upload. Scan. Done. And maybe… have a little fun while you're at it.
 
