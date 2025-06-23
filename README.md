@@ -10,6 +10,20 @@
 
 ---
 
+## ⚠️ Heads-Up About Hosting
+
+This app uses **Supabase’s free tier** to host the uploaded PDF files.  
+⚠️ If there is **no activity for 1 week**, Supabase may temporarily **pause the storage** to save resources.
+
+So if the **QR code doesn't load** or the **app seems broken**, don't worry — it's likely just **sleeping** 💤
+
+I’ll try to keep it awake, but if it happens:
+- Just try again later
+- Or give it a ⭐ and raise an issue, I’ll wake it up manually 👨‍💻
+
+---
+
+
 ## 🤔 Why I Built This
 
 There are tons of QR code generators out there. I tried a few, and most of them asked for my email just to send me a QR code. Felt like **data theft** in disguise.
