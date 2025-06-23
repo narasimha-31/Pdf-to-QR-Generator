@@ -15,7 +15,7 @@
 This app uses **Supabase’s free tier** to host the uploaded PDF files.  
 ⚠️ If there is **no activity for 1 week**, Supabase may temporarily **pause the storage** to save resources.
 
-So if the **QR code doesn't load** or the **app seems broken**, don't worry — it's likely just **sleeping** 💤
+So if the **QR code doesn't load** or the **app seems broken**, don't worry, it's likely just **sleeping** 💤
 
 I’ll try to keep it awake, but if it happens:
 - Just try again later
