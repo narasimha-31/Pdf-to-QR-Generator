@@ -19,6 +19,18 @@ If there’s **no activity for 1 week**, Supabase may temporarily pause the stor
 > Try again later, or star the repo and raise an issue — I’ll manually wake it up 👨‍💻
 
 ---
+### 🛠 Tech Stack
+
+<div align="left">
+  <img src="https://img.shields.io/badge/HTML-FF5722?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
+  <img src="https://img.shields.io/badge/QRCode.js-000000?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/tsParticles-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+</div>
+
+---
 
 ### 💡 Why I Built This
 
@@ -39,18 +51,6 @@ This tool is my personal solution to a real-world need: **share my resume instan
 
 ---
 
-### 🛠 Tech Stack
-
-<div align="left">
-  <img src="https://img.shields.io/badge/HTML-FF5722?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
-  <img src="https://img.shields.io/badge/QRCode.js-000000?style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://img.shields.io/badge/tsParticles-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
-</div>
-
----
 
 ### 📎 Use Cases
 
