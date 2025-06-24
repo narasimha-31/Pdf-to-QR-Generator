@@ -34,7 +34,7 @@ If there’s **no activity for 1 week**, Supabase may temporarily pause the stor
 
 ### 💡 Why I Built This
 
-Most QR generators ask for emails — which feels like data theft in disguise.  
+Most QR generators ask for emails, which feels like data theft in disguise.  
 This tool is my personal solution to a real-world need: **share my resume instantly** with zero friction, no spam, and no third-party traps.
 
 ---
