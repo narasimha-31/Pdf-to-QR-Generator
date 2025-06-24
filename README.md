@@ -67,7 +67,7 @@ This tool is my personal solution to a real-world need: **share my resume instan
 |-----------|---------------|
 | ![Home](./screenshots/home.png) | ![QR](./screenshots/qr-code.png) |
 
-> 📌 *Add more screenshots inside a `screenshots/` folder and link them here.*
+
 
 ---
 
