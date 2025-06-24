@@ -12,7 +12,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <style>
-  /* Enable radial gradient for Tailwind CDN */
+  /* Radial gradient for Tailwind CDN */
   .bg-gradient-radial {
     background-image: radial-gradient(circle at center, var(--tw-gradient-stops));
   }
@@ -24,7 +24,7 @@
   <!-- Particle background -->
 <div id="tsparticles" class="absolute inset-0 z-0"></div>
 
-<!-- ✨ Fancy glow layer -->
+<!--  glow layer -->
 <div id="powerGlow" class="absolute inset-0 z-0 pointer-events-none transition duration-500"></div>
 
 
@@ -45,7 +45,7 @@
 
     <input type="file" id="pdfFile" accept=".pdf" class="hidden" onchange="showFileName()" />
 
-<!-- 👇 This will show the selected file name -->
+<!--the selected file name -->
 <p id="fileNameDisplay" class="text-sm text-gray-600 mb-4 italic text-center">No file selected</p>
 
 
@@ -65,7 +65,7 @@
       </button>
     </div>
 
-    <!-- Power Meter UI -->
+    <!-- power meter UI -->
   <div class="mt-6 text-left">
     <p id="powerLabel" class="text-sm font-medium mb-1 text-gray-700">Power level: 🟢 Idle</p>
     <div class="w-full h-4 bg-gray-200 rounded-full">
@@ -160,7 +160,7 @@
 let lastClickTime = Date.now();
 let floodAlertCooldown = false;
 
-  // ✅ Better flood message logic
+  // message logic
   const messages = [
   "Alright champ, you filled the sky with stardust 🌌",
   "Are you trying to crash the universe? 😅",
@@ -186,7 +186,7 @@ setInterval(async () => {
   const now = Date.now();
   const timeSinceClick = now - lastClickTime;
 
-  // 💥 Power Meter Logic
+  // Power Meter
   const powerBar = document.getElementById("powerBar");
   const powerLabel = document.getElementById("powerLabel");
 
@@ -216,7 +216,7 @@ setInterval(async () => {
   powerBar.className = `h-full rounded-full transition-all duration-300 ease-in-out ${color}`;
   powerLabel.textContent = `Power level: ${label}`;
 
-  // ✨ Fancy glow background control
+  // glow background
 const powerGlow = document.getElementById("powerGlow");
 
 if (count > 800) {
@@ -228,7 +228,7 @@ if (count > 800) {
 }
 
 
-  // 🎯 Click-triggered alert logic (with cooldown)
+  // click-triggered alert 
   if (
     count > 200 &&
     timeSinceClick < 3000 &&
