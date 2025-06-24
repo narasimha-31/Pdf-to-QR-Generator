@@ -63,11 +63,13 @@ This tool is my personal solution to a real-world need: **share my resume instan
 
 ### 📸 Screenshots
 
-| Home Page | QR Generated |
-|-----------|---------------|
-| ![Home](./ss1.png) | ![QR](./ss2.png) |
-
-
+| Home Page | 
+|-----------|
+| ![Home](./ss1.png) 
+|QR Generated |
+![QR](./ss2.png)
+|Partical Game |
+![QR](./ss3.png)
 
 ---
 
