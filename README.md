@@ -4,7 +4,7 @@
 
 ---
 
-### 🚀 Live Demo
+### Live Demo
 
 👉 [Click here to try it out](https://pdf-to-qr.netlify.app/)
 
@@ -59,7 +59,7 @@ This tool is my personal solution to a real-world need: **share my resume instan
 - Boost your **personal branding** with interactive tech
 
 ---
-### 🧪 How It Works
+###  How It Works
 
 1. Select your PDF file.
 2. Click **Generate QR Code**.
