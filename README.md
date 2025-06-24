@@ -60,6 +60,17 @@ This tool is my personal solution to a real-world need: **share my resume instan
 
 ---
 
+
+### 📸 Screenshots
+
+| Home Page | QR Generated |
+|-----------|---------------|
+| ![Home](./screenshots/home.png) | ![QR](./screenshots/qr-code.png) |
+
+> 📌 *Add more screenshots inside a `screenshots/` folder and link them here.*
+
+---
+
 ### 🧪 How It Works
 
 1. Select your PDF file.
