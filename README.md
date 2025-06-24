@@ -1,105 +1,86 @@
-# 📄 PDF to QR - Resume Sharer with a Twist
+<h1 align="center">📄 PDF to QR – Resume Sharer with a Twist</h1>
 
-> Upload. Scan. Done. And maybe… have a little fun while you're at it.
-
----
-
-## Live Demo  
-[👉 Click here to try it out](https://pdf-to-qr.netlify.app/)  
-
+<p align="center">Upload. Scan. Done. And maybe… have a little fun while you're at it.</p>
 
 ---
 
-## ⚠️ Heads-Up About Hosting
+### 🚀 Live Demo
 
-This app uses **Supabase’s free tier** to host the uploaded PDF files.  
-⚠️ If there is **no activity for 1 week**, Supabase may temporarily **pause the storage** to save resources.
-
-So if the **QR code doesn't load** or the **app seems broken**, don't worry, it's likely just **sleeping** 💤
-
-I’ll try to keep it awake, but if it happens:
-- Just try again later
-- Or give it a ⭐ and raise an issue, I’ll wake it up manually 👨‍💻
+👉 [Click here to try it out](https://pdf-to-qr.netlify.app/)
 
 ---
 
+### ⚠️ Heads-Up About Hosting
 
-## 🤔 Why I Built This
+This project uses **Supabase’s free tier** to host uploaded PDF files.  
+If there’s **no activity for 1 week**, Supabase may temporarily pause the storage.
 
-There are tons of QR code generators out there. I tried a few, and most of them asked for my email just to send me a QR code. Felt like **data theft** in disguise.
-
-So I thought, 'Why not build my own?'
-
-This tool solves a simple but **personally important** problem:  
-When I want to share my **resume** quickly, I don’t want to rely on some random app. Instead, I just upload it here and show the QR code on my phone. Boom, people scan it and instantly view my resume. **No signups, no spam.**
+> If the **QR code doesn’t load** or the **app seems broken**, it’s likely just sleeping 💤  
+> Try again later, or star the repo and raise an issue — I’ll manually wake it up 👨‍💻
 
 ---
 
-## 🌟 What This App Does
+### 💡 Why I Built This
 
-- ✅ Upload any **PDF** (typically resume, but works for anything)
-- 🔗 Instantly generate a **public QR code**
-- 📱 Fully **mobile-friendly** interface
-- 🌌 **Fun interactive particle game** in the background
-- 📊 **Power Meter** tracks how crazy you go with the particles
-- 💬 Random messages when you flood the screen with clicks
-- 🎮 Yes, it’s utility… with a built-in **mini-game**
+Most QR generators ask for emails — which feels like data theft in disguise.  
+This tool is my personal solution to a real-world need: **share my resume instantly** with zero friction, no spam, and no third-party traps.
 
 ---
 
-## 🧰 Tech Stack
+### ✨ Features
 
-- **HTML + Tailwind CSS** (CDN based)
-- **JavaScript**
-- **Supabase** for PDF file hosting
-- **QRCode.js** for QR generation
-- **tsParticles** for interactive starry background
-
----
-
-## 🎮 Features Breakdown
-
-| Feature                  | Description |
-|--------------------------|-------------|
-| 📄 PDF Upload            | Uploads file to Supabase storage |
-| 📎 Public Link           | Shareable link generated instantly |
-| 🔲 QR Code Generator     | Converts the file link into a QR code |
-| 🌌 Particle Background   | Click to generate stars and play |
-| 🚨 Power Meter           | Measures how wild your clicking gets |
-| 💥 Message Alerts        | Pop-ups when you fill the sky too much |
+- **📄 PDF Upload** – Upload your resume (or any PDF)
+- **🔗 Instant Link** – Generates a public link in seconds
+- **🔲 QR Code Generation** – Instantly sharable
+- **📱 Mobile-Friendly UI** – Optimized for phones and tablets
+- **🌌 Interactive Background** – A starry particle playground
+- **⚡ Power Meter** – Tracks your click intensity
+- **💬 Fun Messages** – Random alerts for playful overloads
 
 ---
 
-## 🧪 How It Works
+### 🛠 Tech Stack
 
-1. Choose a PDF (no size bloat, keep it clean).
-2. Click "Generate QR Code".
-3. Your PDF is uploaded and a **public link + QR** are displayed.
-4. You or anyone else can scan the QR to view the file instantly.
-
----
-
-## 📎 Use Case
-
-- Resume sharing at meetups/career fairs
-- Quick PDF delivery via QR
-- Personal branding without relying on third-party apps
+<div align="left">
+  <img src="https://img.shields.io/badge/HTML-FF5722?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" />
+  <img src="https://img.shields.io/badge/QRCode.js-000000?style=for-the-badge&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/tsParticles-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+</div>
 
 ---
 
-## 🙌 Made by
+### 📎 Use Cases
+
+- Share your **resume** at meetups or career fairs
+- Deliver PDF resources instantly via QR
+- Boost your **personal branding** with interactive tech
+
+---
+
+### 🧪 How It Works
+
+1. Select your PDF file.
+2. Click **Generate QR Code**.
+3. App uploads the file to Supabase and shows:
+   - Public link
+   - QR code for instant access
+4. Open on any device, no login needed.
+
+---
+
+### 🙋 Made By
 
 **Narasimha Royal**  
-_Masters in CS @ University of Houston_  
-Just building tools I need, and making them fun along the way 💡
+_Masters in Computer Science @ University of Houston_  
+Building for fun, function, and the future 🛠
 
 ---
 
-## 🚀 Coming Soon
+### ⏳ Coming Soon
 
-- [ ] 📥 QR-to-Download Mode (Part 2 of the project)
-
+- [ ] 📥 **QR-to-Download** mode (Part 2 of the project)
 
 ---
-
-
