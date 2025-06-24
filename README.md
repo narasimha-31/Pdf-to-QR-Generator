@@ -59,7 +59,16 @@ This tool is my personal solution to a real-world need: **share my resume instan
 - Boost your **personal branding** with interactive tech
 
 ---
+### 🧪 How It Works
 
+1. Select your PDF file.
+2. Click **Generate QR Code**.
+3. App uploads the file to Supabase and shows:
+   - Public link
+   - QR code for instant access
+4. Open on any device, no login needed.
+
+---
 
 ### 📸 Screenshots
 
@@ -70,17 +79,6 @@ This tool is my personal solution to a real-world need: **share my resume instan
 ![QR](./ss2.png)
 |Partical Game |
 ![QR](./ss3.png)
-
----
-
-### 🧪 How It Works
-
-1. Select your PDF file.
-2. Click **Generate QR Code**.
-3. App uploads the file to Supabase and shows:
-   - Public link
-   - QR code for instant access
-4. Open on any device, no login needed.
 
 ---
 
