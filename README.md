@@ -65,7 +65,7 @@ This tool is my personal solution to a real-world need: **share my resume instan
 
 | Home Page | QR Generated |
 |-----------|---------------|
-| ![Home](./screenshots/home.png) | ![QR](./screenshots/qr-code.png) |
+| ![Home](./ss1.png) | ![QR](./screenshots/qr-code.png) |
 
 
 
