@@ -81,6 +81,10 @@ This tool is my personal solution to a real-world need: **share my resume instan
 ![QR](./ss3.png)
 
 ---
+###  Future Enhancements
+
+
+---
 
 ### 🙋 Made By
 
