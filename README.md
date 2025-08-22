@@ -82,7 +82,8 @@ This tool is my personal solution to a real-world need: **share my resume instan
 
 ---
 ###  Future Enhancements
-
+QR compatible for a folder of PDF's
+Not just limited to PDF's
 
 ---
 
